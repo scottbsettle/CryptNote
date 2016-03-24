@@ -1,0 +1,10 @@
+C:\Users\User\Documents\VS\Journal\Journal\bin\Debug\Journal.exe.config
+C:\Users\User\Documents\VS\Journal\Journal\bin\Debug\Journal.exe
+C:\Users\User\Documents\VS\Journal\Journal\bin\Debug\Journal.pdb
+C:\Users\User\Documents\VS\Journal\Journal\obj\Debug\Journal.Form1.resources
+C:\Users\User\Documents\VS\Journal\Journal\obj\Debug\Journal.Login.resources
+C:\Users\User\Documents\VS\Journal\Journal\obj\Debug\Journal.Properties.Resources.resources
+C:\Users\User\Documents\VS\Journal\Journal\obj\Debug\Journal.csproj.GenerateResource.Cache
+C:\Users\User\Documents\VS\Journal\Journal\obj\Debug\Journal.exe
+C:\Users\User\Documents\VS\Journal\Journal\obj\Debug\Journal.pdb
+C:\Users\User\Documents\VS\Journal\Journal\obj\Debug\Journal.csprojResolveAssemblyReference.cache
