@@ -13,10 +13,34 @@ namespace Journal
 {
     public partial class Form1 : Form
     {
-        string Source;
+        string Source = Properties.Settings.Default.SourceFile;
+        int NumberPages = 0;
         public Form1()
         {
             InitializeComponent();
+        }
+        public void SetTab(int _page, string _name)
+        {
+            if(_page <= NumberPages)
+                FileTabs.TabPages[_page].Text = _name;
+          
+        }
+        public void AddPage(string _name)
+        {
+            NumberPages++;
+            TabPage tb = new TabPage(_name);
+            TextBox text = new TextBox();
+            string name = "JournalText";
+            text.Multiline = true;
+            text.Dock = DockStyle.Fill;
+            tb.Controls.Add(text);
+            name += NumberPages.ToString();
+            text.Name = name;
+            FileTabs.TabPages.Add(tb);
+        }
+       public string GetTabName()
+        {
+            return Source;
         }
         public string GetJouralText()
         {
@@ -80,7 +104,11 @@ namespace Journal
             string tmp = "";
             if(Source != "")
             {
-
+                /*
+                string name = "the_name_you_know";
+                Control ctn = this.Controls[name];
+                ctn.Text = "Example...";
+                */
                 try
                 {
                     StreamWriter writer = new StreamWriter(Source);
@@ -113,6 +141,11 @@ namespace Journal
                
             }
             
+        }
+
+        private void newToolStripButton_Click(object sender, EventArgs e)
+        {
+            AddPage("NewPage");
         }
     }
 }

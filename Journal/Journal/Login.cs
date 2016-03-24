@@ -59,10 +59,19 @@ namespace Journal
                     }
                     tmp2 = Decrypt(tmp);
                     reader.Close();
+                    Journal.SetTab(0, Properties.Settings.Default.SourceFile);
                     Journal.SetText(tmp2);
                     Journal.ShowDialog();
                     Close();
                 }
+                else if (UsernameText.Text != Properties.Settings.Default.Username)
+                {
+                    LoginWarning.Visible = true;
+                }
+            }
+           else if (PasswordText.Text != Properties.Settings.Default.Password)
+            {
+                LoginWarning.Visible = true;
             }
         }
     }

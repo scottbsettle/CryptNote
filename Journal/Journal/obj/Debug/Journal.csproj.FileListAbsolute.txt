@@ -8,3 +8,13 @@ C:\Users\User\Documents\VS\Journal\Journal\obj\Debug\Journal.csproj.GenerateReso
 C:\Users\User\Documents\VS\Journal\Journal\obj\Debug\Journal.exe
 C:\Users\User\Documents\VS\Journal\Journal\obj\Debug\Journal.pdb
 C:\Users\User\Documents\VS\Journal\Journal\obj\Debug\Journal.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\VS\0_01\Journal\Journal\bin\Debug\Journal.exe.config
+C:\Users\User\Documents\VS\0_01\Journal\Journal\obj\Debug\Journal.exe
+C:\Users\User\Documents\VS\0_01\Journal\Journal\obj\Debug\Journal.pdb
+C:\Users\User\Documents\VS\0_01\Journal\Journal\bin\Debug\Journal.exe
+C:\Users\User\Documents\VS\0_01\Journal\Journal\bin\Debug\Journal.pdb
+C:\Users\User\Documents\VS\0_01\Journal\Journal\obj\Debug\Journal.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\VS\0_01\Journal\Journal\obj\Debug\Journal.Form1.resources
+C:\Users\User\Documents\VS\0_01\Journal\Journal\obj\Debug\Journal.Login.resources
+C:\Users\User\Documents\VS\0_01\Journal\Journal\obj\Debug\Journal.Properties.Resources.resources
+C:\Users\User\Documents\VS\0_01\Journal\Journal\obj\Debug\Journal.csproj.GenerateResource.Cache
