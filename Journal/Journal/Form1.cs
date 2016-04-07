@@ -55,7 +55,7 @@ namespace Journal
             //   zyxwvutsrqponmlkjihgfedcba
             bool alpha = false;
             string tmp = "";
-            string Alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" , Encryption = "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA";
+            string Alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ \'" , Encryption = "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA-*";
             for(int loop = 0; loop < _tmp.Length; loop++)
             {
                 for(int i = 0; i < Alphabet.Length; i++)
@@ -79,7 +79,7 @@ namespace Journal
         {
             bool alpha = false;
             string tmp = "";
-            string Alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", Encryption = "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA";
+            string Alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ \'", Encryption = "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA-*";
             for (int loop = 0; loop < _tmp.Length; loop++)
             {
                 for (int i = 0; i < Encryption.Length; i++)
@@ -146,6 +146,20 @@ namespace Journal
         private void newToolStripButton_Click(object sender, EventArgs e)
         {
             AddPage("NewPage");
+        }
+
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                FileTabs.TabPages.Remove(FileTabs.SelectedTab);
+            }
+            catch
+            {
+
+            }
         }
     }
 }

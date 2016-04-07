@@ -20,7 +20,7 @@ namespace Journal
         {
             bool alpha = false;
             string tmp = "";
-            string Alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", Encryption = "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA";
+            string Alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ \'", Encryption = "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA-*";
             for (int loop = 0; loop < _tmp.Length; loop++)
             {
                 for (int i = 0; i < Encryption.Length; i++)
