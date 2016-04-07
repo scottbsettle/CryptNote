@@ -74,5 +74,10 @@ namespace Journal
                 LoginWarning.Visible = true;
             }
         }
+
+        private void userNamePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
