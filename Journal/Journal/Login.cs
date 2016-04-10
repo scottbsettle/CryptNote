@@ -15,6 +15,7 @@ namespace Journal
         public Login()
         {
             InitializeComponent();
+            CenterToScreen();
         }
         public string Decrypt(string _tmp)
         {
@@ -62,7 +63,10 @@ namespace Journal
                     Journal.SetTab(0, Properties.Settings.Default.SourceFile);
                     Journal.SetText(tmp2);
                     Journal.ShowDialog();
-                    Close();
+                    Show();
+                    UsernameText.Text = null;
+                    PasswordText.Text = null;
+                   // Close();
                 }
                 else if (UsernameText.Text != Properties.Settings.Default.Username)
                 {
@@ -77,7 +81,13 @@ namespace Journal
 
         private void userNamePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            UsernamePassword Editme = new UsernamePassword();
+            Editme.ShowDialog();
+        }
 
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -28,3 +28,5 @@ C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debu
 C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.Login.resources
 C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.Properties.Resources.resources
 C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.csproj.GenerateResource.Cache
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.UsernamePassword.resources
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.DialogWindow.resources

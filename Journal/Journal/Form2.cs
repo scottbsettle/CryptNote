@@ -15,6 +15,52 @@ namespace Journal
         public UsernamePassword()
         {
             InitializeComponent();
+            CenterToScreen();
+        }
+
+        private void OkButton_Click(object sender, EventArgs e)
+        {
+            if (Info.Text == "Please Enter Current Username and Password")
+            {
+                if (UsernameText.Text == Properties.Settings.Default.Username)
+                {
+                    if (PasswordText.Text == Properties.Settings.Default.Password)
+                    {
+                        VerifyLabel.Visible = true;
+                        VerifyTextBox.Visible = true;
+                        Info.Text = "Please Enter New Username and Password";
+                        UserPasMatch.Visible = false;
+                        PasswordText.Text = null;
+                        UsernameText.Text = null;
+                    }
+                    else
+                    {
+                        UserPasMatch.Visible = true;
+                    }
+                }
+                else
+                {
+                    UserPasMatch.Visible = true;
+                }
+            }
+            else if (Info.Text == "Please Enter New Username and Password")
+            {
+                if (PasswordText.Text == VerifyTextBox.Text)
+                {
+                    Properties.Settings.Default.Username = UsernameText.Text;
+                    Properties.Settings.Default.Password = PasswordText.Text;
+                    Close();
+                }
+                else
+                {
+                    UserPasMatch.Visible = true;
+                }
+            }
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -44,6 +44,7 @@
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userNamePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,7 +54,6 @@
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.userNamePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -187,13 +187,14 @@
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(89, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(149, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -202,6 +203,13 @@
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "&Edit";
+            // 
+            // userNamePasswordToolStripMenuItem
+            // 
+            this.userNamePasswordToolStripMenuItem.Name = "userNamePasswordToolStripMenuItem";
+            this.userNamePasswordToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.userNamePasswordToolStripMenuItem.Text = "Login";
+            this.userNamePasswordToolStripMenuItem.Click += new System.EventHandler(this.userNamePasswordToolStripMenuItem_Click);
             // 
             // toolsToolStripMenuItem
             // 
@@ -264,13 +272,6 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
-            // 
-            // userNamePasswordToolStripMenuItem
-            // 
-            this.userNamePasswordToolStripMenuItem.Name = "userNamePasswordToolStripMenuItem";
-            this.userNamePasswordToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.userNamePasswordToolStripMenuItem.Text = "Login";
-            this.userNamePasswordToolStripMenuItem.Click += new System.EventHandler(this.userNamePasswordToolStripMenuItem_Click);
             // 
             // Login
             // 

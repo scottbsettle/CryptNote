@@ -14,10 +14,18 @@ namespace Journal
     public partial class Form1 : Form
     {
         string Source = Properties.Settings.Default.SourceFile;
-        int NumberPages = 0;
+        int NumberPages = 1;
+        List<TextBox> Tabs = new List<TextBox>();
+        //TextBox[] Tabs = new TextBox[20];
         public Form1()
         {
             InitializeComponent();
+            CenterToScreen();
+            Tabs.Add(JournalText);
+        }
+        public TabControl GetFiletabs()
+        {
+            return FileTabs;
         }
         public void SetTab(int _page, string _name)
         {
@@ -37,11 +45,15 @@ namespace Journal
             name += NumberPages.ToString();
             text.Name = name;
             FileTabs.TabPages.Add(tb);
+            Tabs.Add(text);
+            
+
         }
        public string GetTabName()
         {
             return Source;
         }
+       
         public string GetJouralText()
         {
             return JournalText.Text;
@@ -104,32 +116,25 @@ namespace Journal
             string tmp = "";
             if(Source != "")
             {
-                /*
-                string name = "the_name_you_know";
-                Control ctn = this.Controls[name];
-                ctn.Text = "Example...";
-                */
-                try
-                {
-                    StreamWriter writer = new StreamWriter(Source);
-                    tmp = Encrypt(JournalText.Text);
-                    // writer.WriteLine("File created using StreamWriter class.");
-                    for (int loop = 0; loop < JournalText.Text.Length; loop++)
-                    {
-                        writer.Write(tmp[loop]);
-                         if(loop != 0 && loop != 1 && loop % 150 == 0)
-                            writer.Write("/n");
 
-                    }
-                    writer.Close();
-                }
-                catch
+                string FileName = FileTabs.SelectedTab.Text;
+                if (FileName == "NewPage")
                 {
-                    StreamWriter writer = new StreamWriter("Entery.txt");
+                    DialogWindow dlg = new DialogWindow();
+                    if(DialogResult.OK == dlg.ShowDialog())
+                    {
+                        string change;
+                        change = dlg.GetFileName() + ".txt";
+                        FileTabs.SelectedTab.Text = change;
+                        FileName = change;
+                        dlg.Close();
+                    }
+                }
+                    StreamWriter writer = new StreamWriter(FileName);
                     //JournalText.Text = Encrypt(JournalText.Text);
-                    tmp = Encrypt(JournalText.Text);
+                    tmp = Encrypt(Tabs[FileTabs.SelectedIndex].Text);
                     // writer.WriteLine("File created using StreamWriter class.");
-                    for (int loop = 0; loop < JournalText.Text.Length; loop++)
+                    for (int loop = 0; loop < Tabs[FileTabs.SelectedIndex].Text.Length; loop++)
                     {
                         writer.Write(tmp[loop]);
                         if (loop != 0 && loop != 1 && loop % 150 == 0)
@@ -137,14 +142,19 @@ namespace Journal
 
                     }
                     writer.Close();
-                }
-               
+
             }
             
         }
 
+        private void FileTabs_Selected(object sender, TabControlEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         private void newToolStripButton_Click(object sender, EventArgs e)
         {
+            if (NumberPages < 20)
             AddPage("NewPage");
         }
 
@@ -153,13 +163,26 @@ namespace Journal
             try
             {
 
-
+                Tabs.Remove(Tabs[FileTabs.SelectedIndex]);
                 FileTabs.TabPages.Remove(FileTabs.SelectedTab);
+                NumberPages--;
+                
             }
             catch
             {
 
             }
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+       
     }
 }

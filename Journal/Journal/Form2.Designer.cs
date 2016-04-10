@@ -31,8 +31,8 @@
             this.Info = new System.Windows.Forms.Label();
             this.Username = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.UsernameText = new System.Windows.Forms.TextBox();
+            this.PasswordText = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.UserPasMatch = new System.Windows.Forms.Label();
             this.VerifyLabel = new System.Windows.Forms.Label();
@@ -63,26 +63,26 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 132);
+            this.label2.Location = new System.Drawing.Point(27, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Password";
             // 
-            // textBox1
+            // UsernameText
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 88);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 20);
-            this.textBox1.TabIndex = 3;
+            this.UsernameText.Location = new System.Drawing.Point(92, 88);
+            this.UsernameText.Name = "UsernameText";
+            this.UsernameText.Size = new System.Drawing.Size(160, 20);
+            this.UsernameText.TabIndex = 3;
             // 
-            // textBox2
+            // PasswordText
             // 
-            this.textBox2.Location = new System.Drawing.Point(92, 132);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '-';
-            this.textBox2.Size = new System.Drawing.Size(160, 20);
-            this.textBox2.TabIndex = 4;
+            this.PasswordText.Location = new System.Drawing.Point(92, 115);
+            this.PasswordText.Name = "PasswordText";
+            this.PasswordText.PasswordChar = '-';
+            this.PasswordText.Size = new System.Drawing.Size(160, 20);
+            this.PasswordText.TabIndex = 4;
             // 
             // label4
             // 
@@ -100,62 +100,68 @@
             // 
             this.UserPasMatch.AutoSize = true;
             this.UserPasMatch.ForeColor = System.Drawing.Color.Red;
-            this.UserPasMatch.Location = new System.Drawing.Point(82, 111);
+            this.UserPasMatch.Location = new System.Drawing.Point(45, 186);
             this.UserPasMatch.Name = "UserPasMatch";
             this.UserPasMatch.Size = new System.Drawing.Size(170, 13);
             this.UserPasMatch.TabIndex = 9;
             this.UserPasMatch.Text = "Username or Password is incorrect";
+            this.UserPasMatch.Visible = false;
             // 
             // VerifyLabel
             // 
             this.VerifyLabel.AutoSize = true;
-            this.VerifyLabel.Location = new System.Drawing.Point(27, 165);
+            this.VerifyLabel.Location = new System.Drawing.Point(27, 148);
             this.VerifyLabel.Name = "VerifyLabel";
             this.VerifyLabel.Size = new System.Drawing.Size(33, 13);
             this.VerifyLabel.TabIndex = 10;
             this.VerifyLabel.Text = "Verify";
+            this.VerifyLabel.Visible = false;
             // 
             // VerifyTextBox
             // 
-            this.VerifyTextBox.Location = new System.Drawing.Point(92, 158);
+            this.VerifyTextBox.Location = new System.Drawing.Point(92, 141);
             this.VerifyTextBox.Name = "VerifyTextBox";
             this.VerifyTextBox.PasswordChar = '-';
             this.VerifyTextBox.Size = new System.Drawing.Size(160, 20);
             this.VerifyTextBox.TabIndex = 11;
+            this.VerifyTextBox.Visible = false;
             // 
             // OkButton
             // 
-            this.OkButton.Location = new System.Drawing.Point(221, 226);
+            this.OkButton.Location = new System.Drawing.Point(221, 208);
             this.OkButton.Name = "OkButton";
-            this.OkButton.Size = new System.Drawing.Size(51, 23);
+            this.OkButton.Size = new System.Drawing.Size(48, 23);
             this.OkButton.TabIndex = 12;
             this.OkButton.Text = "Ok";
             this.OkButton.UseVisualStyleBackColor = true;
+            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
             // CancelButton
             // 
-            this.CancelButton.Location = new System.Drawing.Point(167, 226);
+            this.CancelButton.Location = new System.Drawing.Point(167, 208);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(48, 23);
             this.CancelButton.TabIndex = 13;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // PasswordMatch
             // 
             this.PasswordMatch.AutoSize = true;
             this.PasswordMatch.ForeColor = System.Drawing.Color.Red;
-            this.PasswordMatch.Location = new System.Drawing.Point(92, 185);
+            this.PasswordMatch.Location = new System.Drawing.Point(89, 173);
             this.PasswordMatch.Name = "PasswordMatch";
             this.PasswordMatch.Size = new System.Drawing.Size(126, 13);
             this.PasswordMatch.TabIndex = 14;
             this.PasswordMatch.Text = "Passwords do not match!";
+            this.PasswordMatch.Visible = false;
             // 
             // UsernamePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(284, 235);
             this.Controls.Add(this.PasswordMatch);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.OkButton);
@@ -163,13 +169,15 @@
             this.Controls.Add(this.VerifyLabel);
             this.Controls.Add(this.UserPasMatch);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.PasswordText);
+            this.Controls.Add(this.UsernameText);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Username);
             this.Controls.Add(this.Info);
-            this.MaximumSize = new System.Drawing.Size(300, 300);
-            this.MinimumSize = new System.Drawing.Size(300, 300);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(300, 274);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(300, 274);
             this.Name = "UsernamePassword";
             this.Text = "Username/Password";
             this.ResumeLayout(false);
@@ -182,8 +190,8 @@
         private System.Windows.Forms.Label Info;
         private System.Windows.Forms.Label Username;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox UsernameText;
+        private System.Windows.Forms.TextBox PasswordText;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label UserPasMatch;
         private System.Windows.Forms.Label VerifyLabel;
