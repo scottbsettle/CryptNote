@@ -19,14 +19,14 @@ C:\Users\User\Documents\VS\0_01\Journal\Journal\obj\Debug\Journal.Login.resource
 C:\Users\User\Documents\VS\0_01\Journal\Journal\obj\Debug\Journal.Properties.Resources.resources
 C:\Users\User\Documents\VS\0_01\Journal\Journal\obj\Debug\Journal.csproj.GenerateResource.Cache
 C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\bin\Debug\Journal.exe.config
-C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.exe
-C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.pdb
 C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\bin\Debug\Journal.exe
 C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\bin\Debug\Journal.pdb
-C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.csprojResolveAssemblyReference.cache
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.DialogWindow.resources
 C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.Form1.resources
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.UsernamePassword.resources
 C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.Login.resources
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.OpenSource.resources
 C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.Properties.Resources.resources
 C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.csproj.GenerateResource.Cache
-C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.UsernamePassword.resources
-C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.DialogWindow.resources
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.exe
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.pdb

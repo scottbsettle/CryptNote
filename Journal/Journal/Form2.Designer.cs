@@ -197,7 +197,7 @@
         private System.Windows.Forms.Label VerifyLabel;
         private System.Windows.Forms.TextBox VerifyTextBox;
         private System.Windows.Forms.Button OkButton;
-        private System.Windows.Forms.Button CancelButton;
+       new private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Label PasswordMatch;
     }
 }

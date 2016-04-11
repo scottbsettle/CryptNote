@@ -109,7 +109,7 @@ namespace Journal
                 }
                 alpha = false;
             }
-            return _tmp;
+            return tmp;
         }
         private void saveToolStripButton_Click(object sender, EventArgs e)
         {
@@ -183,6 +183,123 @@ namespace Journal
         {
             Close();
         }
-       
+
+        private void openToolStripButton_Click(object sender, EventArgs e)
+        {
+            OpenSource dlg = new OpenSource();
+            string Source, FileName = "";
+            int FileNameL = 0;
+
+            if (DialogResult.OK == dlg.ShowDialog())
+            {
+                try
+                {
+                    Source = dlg.GetSource();
+                    StreamReader reader = new StreamReader(Source);
+                    string tmp = "", tmp2;
+                    char temp;
+                    while (!reader.EndOfStream)
+                    {
+                        temp = Convert.ToChar(reader.Read());
+                        tmp += temp;
+                    }
+                    tmp2 = Decrypt(tmp);
+                    reader.Close();
+                    for (int loop = 0; loop < Source.Length; loop++)
+                    {
+                        if (Source[loop] == '\\')
+                        {
+                            FileNameL = 0;
+                        }
+                        else
+                            FileNameL++;
+                    }
+                    for (int loop = Source.Length - FileNameL; loop < Source.Length; loop++)
+                    {
+                        FileName += Source[loop];
+                    }
+                    TabPage tb = new TabPage(FileName);
+                    TextBox text = new TextBox();
+                    string name = "JournalText";
+                    text.Multiline = true;
+                    text.Dock = DockStyle.Fill;
+                    tb.Controls.Add(text);
+                    name += NumberPages.ToString();
+                    text.Name = name;
+                    text.Text = tmp2;
+                    FileTabs.TabPages.Add(tb);
+                    Tabs.Add(text);
+                    NumberPages++;
+                }
+                catch
+                {
+
+                }
+              
+            }
+        }
     }
 }
+
+
+/*
+   for(int loop = 0; loop < Source.Length; loop++)
+                {
+                    if (Source[loop] == '\\')
+                    {
+                        FileNameL = 0;
+                    }
+                    else
+                        FileNameL++;
+                }
+                for(int loop = Source.Length - FileNameL; loop < Source.Length; loop++)
+                {
+                    FileName += Source[loop];
+                }
+
+     StreamReader reader = new StreamReader(Source);
+                string tmp = "", tmp2;
+                char temp;
+                while (!reader.EndOfStream)
+                {
+                    temp = Convert.ToChar(reader.Read());
+                    tmp += temp;
+                }
+                tmp2 = Decrypt(tmp);
+                reader.Close();
+
+     TabPage tb = new TabPage("TextBoxName" + FileTabs.TabPages.Count.ToString());
+                TextBox text = new TextBox();
+                StreamReader reader = new StreamReader(Source);
+                string tmp = "", tmp2;
+                char temp;
+                while (!reader.EndOfStream)
+                {
+                    temp = Convert.ToChar(reader.Read());
+                    tmp += temp;
+                }
+                tmp2 = Decrypt(tmp);
+                reader.Close();
+                string name = "JournalText";
+                text.Multiline = true;
+                text.Dock = DockStyle.Fill;
+                for(int loop = 0; loop < Source.Length; loop++)
+                {
+                    if (Source[loop] == '\\')
+                    {
+                        FileNameL = 0;
+                    }
+                    else
+                        FileNameL++;
+                }
+                for(int loop = Source.Length - FileNameL; loop < Source.Length; loop++)
+                {
+                    FileName += Source[loop];
+                }
+                tb.Text = FileName;
+                text.Name = name;
+                text.Text = tmp2;
+                Tabs.Add(text);
+                FileTabs.TabPages.Add(tb);
+            
+ */

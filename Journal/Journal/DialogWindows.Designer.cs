@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.EditDialog = new System.Windows.Forms.TabControl();
             this.FileName = new System.Windows.Forms.TabPage();
             this.FileNameText = new System.Windows.Forms.TextBox();
             this.FileNameLabel = new System.Windows.Forms.Label();
@@ -38,20 +37,10 @@
             this.CancelButton = new System.Windows.Forms.Button();
             this.TipLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.EditDialog.SuspendLayout();
+            this.EditDialog = new System.Windows.Forms.TabControl();
             this.FileName.SuspendLayout();
+            this.EditDialog.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // EditDialog
-            // 
-            this.EditDialog.Controls.Add(this.FileName);
-            this.EditDialog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EditDialog.Location = new System.Drawing.Point(0, 0);
-            this.EditDialog.Multiline = true;
-            this.EditDialog.Name = "EditDialog";
-            this.EditDialog.SelectedIndex = 0;
-            this.EditDialog.Size = new System.Drawing.Size(284, 261);
-            this.EditDialog.TabIndex = 0;
             // 
             // FileName
             // 
@@ -118,7 +107,6 @@
             this.SaveButton.TabIndex = 11;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = true;
-            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // CancelButton
             // 
@@ -149,6 +137,17 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "This changes the current tab selected";
             // 
+            // EditDialog
+            // 
+            this.EditDialog.Controls.Add(this.FileName);
+            this.EditDialog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EditDialog.Location = new System.Drawing.Point(0, 0);
+            this.EditDialog.Multiline = true;
+            this.EditDialog.Name = "EditDialog";
+            this.EditDialog.SelectedIndex = 0;
+            this.EditDialog.Size = new System.Drawing.Size(284, 261);
+            this.EditDialog.TabIndex = 0;
+            // 
             // DialogWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,24 +156,24 @@
             this.Controls.Add(this.EditDialog);
             this.Name = "DialogWindow";
             this.Text = "DialogWindows";
-            this.EditDialog.ResumeLayout(false);
             this.FileName.ResumeLayout(false);
             this.FileName.PerformLayout();
+            this.EditDialog.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl EditDialog;
         private System.Windows.Forms.TabPage FileName;
-        private System.Windows.Forms.Label FileNameLabel;
-        private System.Windows.Forms.TextBox FileNameText;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label TipLabel;
-        private System.Windows.Forms.Button CancelButton;
+        new private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Label Info;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label FileNameLabel;
+        private System.Windows.Forms.TextBox FileNameText;
+        private System.Windows.Forms.TabControl EditDialog;
     }
 }

@@ -10,23 +10,20 @@ using System.Windows.Forms;
 
 namespace Journal
 {
-    public partial class DialogWindow : Form
+    public partial class OpenSource : Form
     {
-        public DialogWindow()
+        public OpenSource()
         {
             InitializeComponent();
         }
+        public string GetSource()
+        {
+            return SourceText.Text;
+        }
 
-        private void CancelButton_Click(object sender, EventArgs e)
+        private void CancelSource_Click(object sender, EventArgs e)
         {
             Close();
         }
-
-       
-        public string GetFileName()
-        {
-            return FileNameText.Text;
-        }
-      
     }
 }
