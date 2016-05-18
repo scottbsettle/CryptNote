@@ -33,13 +33,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.UsernameText = new System.Windows.Forms.TextBox();
             this.PasswordText = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.UserPasMatch = new System.Windows.Forms.Label();
             this.VerifyLabel = new System.Windows.Forms.Label();
             this.VerifyTextBox = new System.Windows.Forms.TextBox();
             this.OkButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
             this.PasswordMatch = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Info
@@ -83,18 +83,6 @@
             this.PasswordText.PasswordChar = '-';
             this.PasswordText.Size = new System.Drawing.Size(160, 20);
             this.PasswordText.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(259, 31);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "ZeroUnderscoreZero";
             // 
             // UserPasMatch
             // 
@@ -157,23 +145,37 @@
             this.PasswordMatch.Text = "Passwords do not match!";
             this.PasswordMatch.Visible = false;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.Font = new System.Drawing.Font("Agency FB", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label6.Location = new System.Drawing.Point(92, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(103, 36);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "CryptNote";
+            // 
             // UsernamePassword
             // 
+            this.AcceptButton = this.OkButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 235);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.PasswordMatch);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.OkButton);
             this.Controls.Add(this.VerifyTextBox);
             this.Controls.Add(this.VerifyLabel);
             this.Controls.Add(this.UserPasMatch);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.PasswordText);
             this.Controls.Add(this.UsernameText);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Username);
             this.Controls.Add(this.Info);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(300, 274);
             this.MinimizeBox = false;
@@ -192,12 +194,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox UsernameText;
         private System.Windows.Forms.TextBox PasswordText;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label UserPasMatch;
         private System.Windows.Forms.Label VerifyLabel;
         private System.Windows.Forms.TextBox VerifyTextBox;
         private System.Windows.Forms.Button OkButton;
        new private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Label PasswordMatch;
+        private System.Windows.Forms.Label label6;
     }
 }

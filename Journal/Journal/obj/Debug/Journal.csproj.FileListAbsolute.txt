@@ -30,3 +30,11 @@ C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debu
 C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.csproj.GenerateResource.Cache
 C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.exe
 C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.pdb
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.csprojResolveAssemblyReference.cache
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.Info.resources
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\bin\Debug\aa\Journal.resources.dll
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\bin\Debug\af\Journal.resources.dll
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.Form1.aa.resources
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.Form1.af.resources
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\aa\Journal.resources.dll
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\af\Journal.resources.dll

@@ -33,9 +33,9 @@
             this.CancelSource = new System.Windows.Forms.Button();
             this.SaveSource = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.SourceText = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -74,7 +74,7 @@
             this.SaveSource.Name = "SaveSource";
             this.SaveSource.Size = new System.Drawing.Size(59, 23);
             this.SaveSource.TabIndex = 27;
-            this.SaveSource.Text = "Save";
+            this.SaveSource.Text = "Open";
             this.SaveSource.UseVisualStyleBackColor = true;
             // 
             // label5
@@ -86,18 +86,6 @@
             this.label5.Size = new System.Drawing.Size(223, 17);
             this.label5.TabIndex = 26;
             this.label5.Text = "Enter the file source that you want";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(13, 22);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(259, 31);
-            this.label6.TabIndex = 25;
-            this.label6.Text = "ZeroUnderscoreZero";
             // 
             // label7
             // 
@@ -115,20 +103,33 @@
             this.SourceText.Size = new System.Drawing.Size(145, 20);
             this.SourceText.TabIndex = 23;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.Font = new System.Drawing.Font("Agency FB", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(92, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(103, 36);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "CryptNote";
+            // 
             // OpenSource
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(275, 240);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CancelSource);
             this.Controls.Add(this.SaveSource);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.SourceText);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "OpenSource";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OpenSource";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -142,8 +143,8 @@
         private System.Windows.Forms.Button CancelSource;
         private System.Windows.Forms.Button SaveSource;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox SourceText;
+        private System.Windows.Forms.Label label6;
     }
 }
