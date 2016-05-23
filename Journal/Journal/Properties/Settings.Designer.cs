@@ -37,7 +37,7 @@ namespace Journal.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Password")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string Password {
             get {
                 return ((string)(this["Password"]));
@@ -56,6 +56,18 @@ namespace Journal.Properties {
             }
             set {
                 this["SourceFile"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("42")]
+        public string IV_per {
+            get {
+                return ((string)(this["IV_per"]));
+            }
+            set {
+                this["IV_per"] = value;
             }
         }
     }

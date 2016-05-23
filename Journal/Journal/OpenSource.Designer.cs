@@ -36,6 +36,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.SourceText = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
             // label2
@@ -146,5 +147,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox SourceText;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

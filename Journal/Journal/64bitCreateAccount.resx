@@ -117,20 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="richTextBox1.Text" xml:space="preserve">
-    <value>
-
-
-
-
-CryptNote welcomes you to get into contact with us if you experance having any issues. Email us at s.settle@zerounderscorezero.com and we will get back to you as soon as possible.
-
-
-
-CrypteNote will like to remind you that its not the safiest program. We are only using a 64-bit encrpytion. Best regards from ZeroUnderscoreZero
-</value>
-  </data>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
 </root>

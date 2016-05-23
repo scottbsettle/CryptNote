@@ -16,17 +16,7 @@ namespace Journal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            if (Properties.Settings.Default.Password == "Password")
-            {
-                if (Properties.Settings.Default.Username == "Admin")
-                {
-                    UsernamePassword Editme = new UsernamePassword();
-                    Editme.SetNewUser(true);
-                    Application.Run(Editme);
-                }
-            }
-            else
-            Application.Run(new Login());
+                Application.Run(new Login());
         }
     }
 }
