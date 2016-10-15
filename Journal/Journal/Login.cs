@@ -8,15 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Runtime.InteropServices;
+
 namespace Journal
 {
     public partial class Login : Form
     {
         _32bitEncryption Encryption = new _32bitEncryption();
+        [DllImport("kernel32.dll", EntryPoint = "AllocConsole", SetLastError = true, CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
+        private static extern int AllocConsole();
         public Login()
         {
             InitializeComponent();
             CenterToScreen();
+#if DEBUG
+          //  AllocConsole();
+#endif
         }
         public string Decrypt(string _tmp)
         {
@@ -57,26 +64,7 @@ namespace Journal
                     LoginWarning.Visible = false;
                     Form1 Journal = new Form1();
                     Hide();
-                    //try
-                    //{
-                    //    StreamReader reader = new StreamReader(Properties.Settings.Default.SourceFile);
-                    //    string tmp = "", tmp2;
-                    //    char temp;
-                    //    while (!reader.EndOfStream)
-                    //    {
-                    //        temp = Convert.ToChar(reader.Read());
-                    //        tmp += temp;
-                    //    }
-                    //    tmp2 = Decrypt(tmp);
-                    //    reader.Close();
-                    //    Journal.SetTab(0, Properties.Settings.Default.SourceFile);
-                    //    Journal.SetText(tmp2);
-                    //    Journal.ShowDialog();
-                    //    Show();
-                    //}
-                    //catch
-                    //{
-                      //  System.Threading.Thread.Sleep(5000);
+                   
                         Journal.SetTab(0, "NewPage");
                         Journal.ShowDialog();
                         Show();
@@ -145,10 +133,12 @@ namespace Journal
            // Hide();
         }
 
-        private void PasswordText_Enter(object sender, EventArgs e)
+        private void PasswordText_KeyDown(object sender, KeyEventArgs e)
         {
-            if(PasswordText.Text.Length > 0)
-            button1.PerformClick();
+            if(e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+            }
         }
     }
 }

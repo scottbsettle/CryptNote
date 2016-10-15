@@ -73,11 +73,12 @@ namespace Journal
 
         private void PasswordText_Enter(object sender, EventArgs e)
         {
-            OkButton.PerformClick();
+           // OkButton.PerformClick();
         }
 
         private void VerifyTextBox_Enter(object sender, EventArgs e)
         {
+            if(VerifyTextBox.Text.Length > 0)
             OkButton.PerformClick();
         }
     }

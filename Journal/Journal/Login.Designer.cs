@@ -71,7 +71,7 @@
             this.PasswordText.PasswordChar = '-';
             this.PasswordText.Size = new System.Drawing.Size(183, 21);
             this.PasswordText.TabIndex = 2;
-            this.PasswordText.Enter += new System.EventHandler(this.PasswordText_Enter);
+            this.PasswordText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PasswordText_KeyDown);
             // 
             // label3
             // 

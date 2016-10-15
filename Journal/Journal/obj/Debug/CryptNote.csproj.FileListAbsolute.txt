@@ -1,21 +1,21 @@
-C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\bin\Debug\Journal.exe.config
-C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\bin\Debug\Journal.exe
-C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\bin\Debug\Journal.pdb
-C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\bin\Debug\aa\Journal.resources.dll
-C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\bin\Debug\af\Journal.resources.dll
-C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal._64bitCreateAccount.resources
-C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.DialogWindow.resources
-C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.Form1.resources
-C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.UsernamePassword.resources
-C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.Info.resources
-C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.Login.resources
-C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.OpenSource.resources
-C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.Properties.Resources.resources
-C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.Form1.aa.resources
-C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.Form1.af.resources
-C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\CryptNote.csproj.GenerateResource.Cache
-C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\aa\Journal.resources.dll
-C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\af\Journal.resources.dll
-C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.exe
-C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\Journal.pdb
-C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Debug\CryptNote.csprojResolveAssemblyReference.cache
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\bin\Debug\Journal.exe.config
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\bin\Debug\Journal.exe
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\bin\Debug\Journal.pdb
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\bin\Debug\aa\Journal.resources.dll
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\bin\Debug\af\Journal.resources.dll
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Debug\CryptNote.csprojResolveAssemblyReference.cache
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Debug\Journal._64bitCreateAccount.resources
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Debug\Journal.DialogWindow.resources
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Debug\Journal.Form1.resources
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Debug\Journal.UsernamePassword.resources
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Debug\Journal.Info.resources
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Debug\Journal.Login.resources
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Debug\Journal.OpenSource.resources
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Debug\Journal.Properties.Resources.resources
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Debug\Journal.Form1.aa.resources
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Debug\Journal.Form1.af.resources
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Debug\CryptNote.csproj.GenerateResource.Cache
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Debug\aa\Journal.resources.dll
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Debug\af\Journal.resources.dll
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Debug\Journal.exe
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Debug\Journal.pdb
