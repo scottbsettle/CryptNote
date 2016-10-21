@@ -49,5 +49,32 @@ namespace Journal
             // error occured, return false
             return false;
         }
+        public bool writeString(string _write, string _source)
+        {
+            if (_write.Length > 0 && _source.Length > 0)
+            {
+                File.WriteAllText(_source, _write);
+                return true;
+            }
+            else
+                return false;
+        }
+        public string readString(string _source)
+        {
+            try
+            {
+                if (_source.Length > 0)
+                {
+                    string _read = File.ReadAllText(_source);
+                    return _read;
+                }
+            }
+            catch (Exception _Exception)
+            {
+                Console.WriteLine("Exception caught in process: {0}",
+                                 _Exception.ToString());
+            }
+                return null;
+        }
     }
 }

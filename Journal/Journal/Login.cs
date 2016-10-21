@@ -133,12 +133,6 @@ namespace Journal
            // Hide();
         }
 
-        private void PasswordText_KeyDown(object sender, KeyEventArgs e)
-        {
-            if(e.KeyCode == Keys.Enter)
-            {
-                button1.PerformClick();
-            }
-        }
+       
     }
 }
