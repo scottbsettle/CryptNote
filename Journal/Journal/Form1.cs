@@ -42,7 +42,7 @@ namespace Journal
         Save_Open__File Save_Open = new Save_Open__File(DataVarList, Source);
         ColorDialog Colordlg = new ColorDialog();
         //   TabControl tb;
-
+        PictureBox _image = new PictureBox();
         #endregion
         #region Initialize
         public Form1()
@@ -251,7 +251,7 @@ namespace Journal
                     if (DataVarList.Count > 0)
                         DataVarList[FileTabs.SelectedIndex].Tabs.SelectionFont = new Font(DataVarList[FileTabs.SelectedIndex].Tabs.SelectionFont.Name, fontsize,
                DataVarList[FileTabs.SelectedIndex].Tabs.SelectionFont.Style, DataVarList[FileTabs.SelectedIndex].Tabs.SelectionFont.Unit);
-                  
+
                     Debug.WriteLine("Font Size ++");
                 }
         }
@@ -713,6 +713,21 @@ namespace Journal
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             DataVarList.Clear();
+        }
+
+        private void AddPicture_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog OpenImage = new OpenFileDialog();
+            OpenImage.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
+            OpenImage.FilterIndex = 2;
+            OpenImage.RestoreDirectory = true;
+            if (OpenImage.ShowDialog() == DialogResult.OK)
+            {
+                _image.Load(OpenImage.FileName);
+                Clipboard.SetImage(_image.Image);
+                DataVarList[FileTabs.SelectedIndex].Tabs.Paste();
+
+            }
         }
     }
 }

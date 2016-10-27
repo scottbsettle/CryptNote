@@ -46,6 +46,7 @@
             this.BoldButton = new System.Windows.Forms.ToolStripButton();
             this.UnderlineButton = new System.Windows.Forms.ToolStripButton();
             this.ItalicButton = new System.Windows.Forms.ToolStripButton();
+            this.StrikeOutButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
             this.BulletPointButton = new System.Windows.Forms.ToolStripButton();
             this.Encrpyt_Decrypt_Button = new System.Windows.Forms.ToolStripButton();
@@ -107,7 +108,7 @@
             this.FileTabs = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.JournalText = new System.Windows.Forms.RichTextBox();
-            this.StrikeOutButton = new System.Windows.Forms.ToolStripButton();
+            this.AddPicture = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -136,8 +137,9 @@
             this.UnderlineButton,
             this.ItalicButton,
             this.StrikeOutButton,
-            this.toolStripSeparator14,
             this.BulletPointButton,
+            this.toolStripSeparator14,
+            this.AddPicture,
             this.Encrpyt_Decrypt_Button,
             this.toolStripSeparator1,
             this.FontTextToolStrip,
@@ -247,6 +249,12 @@
             resources.ApplyResources(this.ItalicButton, "ItalicButton");
             this.ItalicButton.Name = "ItalicButton";
             this.ItalicButton.Click += new System.EventHandler(this.ItalicButton_Click);
+            // 
+            // StrikeOutButton
+            // 
+            this.StrikeOutButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.StrikeOutButton, "StrikeOutButton");
+            this.StrikeOutButton.Name = "StrikeOutButton";
             // 
             // toolStripSeparator14
             // 
@@ -662,11 +670,12 @@
             this.JournalText.Name = "JournalText";
             this.JournalText.Resize += new System.EventHandler(this.JournalText_Resize);
             // 
-            // StrikeOutButton
+            // AddPicture
             // 
-            this.StrikeOutButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.StrikeOutButton, "StrikeOutButton");
-            this.StrikeOutButton.Name = "StrikeOutButton";
+            this.AddPicture.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.AddPicture, "AddPicture");
+            this.AddPicture.Name = "AddPicture";
+            this.AddPicture.Click += new System.EventHandler(this.AddPicture_Click);
             // 
             // Form1
             // 
@@ -774,6 +783,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.RichTextBox JournalText;
         private System.Windows.Forms.ToolStripButton StrikeOutButton;
+        private System.Windows.Forms.ToolStripButton AddPicture;
     }
 }
 
