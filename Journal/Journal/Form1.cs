@@ -22,27 +22,28 @@ namespace Journal
             public string FileSources;
         }
         #region Variables
+        //byte[] Encryptedbytes;
         static string Source = Properties.Settings.Default.SourceFile;
         int NumberPages = 1;
         int fontsize = 12;
+        int WordCountint = 0;
+        //const int LEADING_SPACE = 12;
+        //const int CLOSE_SPACE = 15;
+        //const int CLOSE_AREA = 15;
         DataVariable Datavar = new DataVariable();
         static List<DataVariable> DataVarList = new List<DataVariable>();
+        Button temp = new Button();
+        RichTextBox _Paste = null; // = new RichTextBox();
+       // Save_Open__File Save_Open = new Save_Open__File(DataVarList, Source);
+        ColorDialog Colordlg = new ColorDialog();
+        PictureBox _image = null; //= new PictureBox();
         //List<RichTextBox> Tabs = new List<RichTextBox>();
         //List<bool> Encrypted = new List<bool>();
-        Undo_Redo UnRedo = new Undo_Redo();
-        Button temp = new Button();
-        const int LEADING_SPACE = 12;
-        const int CLOSE_SPACE = 15;
-        const int CLOSE_AREA = 15;
-        _32bitEncryption _32bit = new _32bitEncryption();
-        byte[] Encryptedbytes;
+        //Undo_Redo UnRedo = new Undo_Redo();
         //static List<string> FileSources = new List<string>();
-        int WordCountint = 0;
-        RichTextBox _Paste = new RichTextBox();
-        Save_Open__File Save_Open = new Save_Open__File(DataVarList, Source);
-        ColorDialog Colordlg = new ColorDialog();
         //   TabControl tb;
-        PictureBox _image = new PictureBox();
+        // UnRedo m_buffer;
+        //_32bitEncryption _32bit;//= new _32bitEncryption();
         #endregion
         #region Initialize
         public Form1()
@@ -59,7 +60,6 @@ namespace Journal
         {
             // get the inital length
             int tabLength = FileTabs.ItemSize.Width;
-
             // measure the text in each tab and make adjustment to the size
             for (int i = 0; i < this.FileTabs.TabPages.Count; i++)
             {
@@ -67,12 +67,9 @@ namespace Journal
                 FileTabs.Padding = new System.Drawing.Point(5, 3);
                 int currentTabLength = TextRenderer.MeasureText(currentPage.Text, FileTabs.Font).Width;
                 // adjust the length for what text is written
-                currentTabLength += LEADING_SPACE + CLOSE_SPACE + CLOSE_AREA;
-
+                //currentTabLength += LEADING_SPACE + CLOSE_SPACE + CLOSE_AREA;
                 if (currentTabLength > tabLength)
-                {
                     tabLength = currentTabLength;
-                }
             }
             Size newTabSize = new Size(tabLength, FileTabs.ItemSize.Height);
             FileTabs.ItemSize = newTabSize;
@@ -118,7 +115,7 @@ namespace Journal
             FileTabs.SelectTab(NumberPages - 1);
             CalcWordCount();
             FontText.Text = fontsize.ToString();
-            UnRedo.AddPage();
+            //UnRedo.AddPage();
             Debug.WriteLine("Added new page " + FileName);
 
 
@@ -127,9 +124,11 @@ namespace Journal
         #region ToolStripButtons
         private void saveToolStripButton_Click(object sender, EventArgs e)
         {
+
             if (NumberPages > 0)
             {
-                Save_Open.SetEncryptedBytes(Encryptedbytes);
+                //Save_Open.SetEncryptedBytes();
+                Save_Open__File Save_Open = new Save_Open__File(DataVarList, Source);
                 Save_Open.SaveFile(FileTabs, DataVarList);
             }
         }
@@ -167,7 +166,7 @@ namespace Journal
                 //Tabs.Remove(DataVarList[FileTabs.SelectedIndex].Tabs);
                 DataVarList.RemoveAt(FileTabs.SelectedIndex);
                 FileTabs.TabPages.Remove(FileTabs.SelectedTab);
-                UnRedo.RemovePage(FileTabs.SelectedIndex);
+               // UnRedo.RemovePage(FileTabs.SelectedIndex);
                 //Encrypted.Remove(false);
                 if (_neweselected > 0)
                 {
@@ -194,6 +193,7 @@ namespace Journal
 
         private void openToolStripButton_Click(object sender, EventArgs e)
         {
+            Save_Open__File Save_Open = new Save_Open__File(DataVarList, Source);
             string[] Arg = Save_Open.OpenFile();
             if (Arg != null)
             {
@@ -259,6 +259,7 @@ namespace Journal
         private void copyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //string buffertext = "";
+            _Paste = new RichTextBox();
             _Paste.Text = "";
             if (DataVarList.Count > 0)
                 if (DataVarList[FileTabs.SelectedIndex].Tabs.SelectionLength > 0)
@@ -267,6 +268,7 @@ namespace Journal
                     //  _Paste.Text = DataVarList[FileTabs.SelectedIndex].Tabs.SelectedText;
                     DataVarList[FileTabs.SelectedIndex].Tabs.Copy();
                 }
+            _Paste = null;
         }
 
         private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -288,6 +290,7 @@ namespace Journal
                     WordCountText.Text = WordCountint.ToString();
                     _Paste.Text = DataVarList[FileTabs.SelectedIndex].Tabs.SelectedText;
                     DataVarList[FileTabs.SelectedIndex].Tabs.SelectedText = "";
+                    
                 }
             }
         }
@@ -307,11 +310,14 @@ namespace Journal
         private void redoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //save undo in buffer then redo it in this snip of code 
-            if (UnRedo.CheckRedu(FileTabs.SelectedIndex))
-            {
-                DataVarList[FileTabs.SelectedIndex].Tabs.Rtf = UnRedo.GetRedo(FileTabs.SelectedIndex);
-                DataVarList[FileTabs.SelectedIndex].Tabs.Select(DataVarList[FileTabs.SelectedIndex].Tabs.Text.Length, DataVarList[FileTabs.SelectedIndex].Tabs.Text.Length);
-            }
+            //if (UnRedo.CheckRedu(FileTabs.SelectedIndex))
+            //{
+            //    //DataVarList[FileTabs.SelectedIndex].Tabs.Rtf = UnRedo.GetRedo(FileTabs.SelectedIndex);
+            //    //m_buffer = UnRedo.GetRedo(FileTabs.SelectedIndex);
+            //    //DataVarList[FileTabs.SelectedIndex].Tabs.Select(m_buffer.m_position, 0);
+            //    //DataVarList[FileTabs.SelectedIndex].Tabs.SelectedRtf = m_buffer.m_var;
+            //    //DataVarList[FileTabs.SelectedIndex].Tabs.Select(DataVarList[FileTabs.SelectedIndex].Tabs.Text.Length, DataVarList[FileTabs.SelectedIndex].Tabs.Text.Length);
+            //}
             CalcWordCount();
         }
 
@@ -334,11 +340,14 @@ namespace Journal
 
         private void UndoButton_Click(object sender, EventArgs e)
         {
-            if (UnRedo.CheckUndo(FileTabs.SelectedIndex))
-            {
-                DataVarList[FileTabs.SelectedIndex].Tabs.Rtf = UnRedo.GetUndo(FileTabs.SelectedIndex);
-                DataVarList[FileTabs.SelectedIndex].Tabs.Select(DataVarList[FileTabs.SelectedIndex].Tabs.Text.Length, DataVarList[FileTabs.SelectedIndex].Tabs.Text.Length);
-            }
+            //if (UnRedo.CheckUndo(FileTabs.SelectedIndex))
+            //{
+            //    //DataVarList[FileTabs.SelectedIndex].Tabs.Rtf = UnRedo.GetUndo(FileTabs.SelectedIndex);
+            //    //m_buffer = UnRedo.GetUndo(FileTabs.SelectedIndex);
+            //    //DataVarList[FileTabs.SelectedIndex].Tabs.Select(m_buffer.m_position, 0);
+            //    //DataVarList[FileTabs.SelectedIndex].Tabs.SelectedRtf = m_buffer.m_var;
+            //    //DataVarList[FileTabs.SelectedIndex].Tabs.Select(DataVarList[FileTabs.SelectedIndex].Tabs.Text.Length, DataVarList[FileTabs.SelectedIndex].Tabs.Text.Length);
+            //}
             CalcWordCount();
         }
         //Save as 
@@ -346,7 +355,8 @@ namespace Journal
         {
             if (DataVarList.Count > 0)
             {
-                Save_Open.SetEncryptedBytes(Encryptedbytes);
+                Save_Open__File Save_Open = new Save_Open__File(DataVarList, Source);
+                //Save_Open.SetEncryptedBytes(Encryptedbytes);
                 Save_Open.SaveAs(FileTabs, DataVarList);
                 Debug.WriteLine("Save As Called ");
             }
@@ -360,7 +370,7 @@ namespace Journal
                 {
                     if (DataVarList[FileTabs.SelectedIndex].Tabs.Text != "")
                     {
-
+                        Save_Open__File Save_Open = new Save_Open__File(DataVarList, Source);
                         string _string =
                        Save_Open.Encrypt(DataVarList[FileTabs.SelectedIndex].Tabs.Rtf);
 
@@ -379,12 +389,14 @@ namespace Journal
                         DataVarList[FileTabs.SelectedIndex] = Datavar;
                         Encrpyt_Decrypt_Button.BackColor = Color.LightGray;
                         FileTabs.SelectedTab.BackColor = Color.WhiteSmoke;
+                        Datavar = new DataVariable();
                     }
                 }
                 else
                 {
                     if (DataVarList[FileTabs.SelectedIndex].Tabs.Text != "")
                     {
+                        Save_Open__File Save_Open = new Save_Open__File(DataVarList, Source);
                         DataVarList[FileTabs.SelectedIndex].Tabs.WordWrap = false;
                         string _string = Save_Open.Decrypt(DataVarList[FileTabs.SelectedIndex].Tabs.Text);
                         DataVarList[FileTabs.SelectedIndex].Tabs.Rtf = _string;
@@ -399,6 +411,7 @@ namespace Journal
                         DataVarList[FileTabs.SelectedIndex] = Datavar;
                         Encrpyt_Decrypt_Button.BackColor = Color.White;
                         FileTabs.SelectedTab.BackColor = DataVarList[FileTabs.SelectedIndex].Tabs.BackColor;
+                        Datavar = new DataVariable();
                     }
                 }
             }
@@ -434,7 +447,8 @@ namespace Journal
         {
             if (NumberPages > 0)
             {
-                Save_Open.SetEncryptedBytes(Encryptedbytes);
+                //Save_Open.SetEncryptedBytes(Encryptedbytes);
+                Save_Open__File Save_Open = new Save_Open__File(DataVarList, Source);
                 Save_Open.SaveAllFile(FileTabs, DataVarList, NumberPages);
             }
         }
@@ -512,7 +526,8 @@ namespace Journal
         private void FileTabs_KeyDown(object sender, KeyEventArgs e)
         {
             string _tb = DataVarList[FileTabs.SelectedIndex].Tabs.Rtf;
-            UnRedo.AddToUndo(FileTabs.SelectedIndex, _tb);
+           // int posbuffer = DataVarList[FileTabs.SelectedIndex].Tabs.SelectionStart;
+           // UnRedo.AddToUndo(FileTabs.SelectedIndex, _tb, DataVarList[FileTabs.SelectedIndex].Tabs.SelectionStart);
             CalcWordCount();
         }
         //Change word count to new tab word count
@@ -693,12 +708,13 @@ namespace Journal
 
         private void RedoButton_Click(object sender, EventArgs e)
         {
-            if (UnRedo.CheckRedu(FileTabs.SelectedIndex))
-            {
-                DataVarList[FileTabs.SelectedIndex].Tabs.Rtf = UnRedo.GetRedo(FileTabs.SelectedIndex);
-                DataVarList[FileTabs.SelectedIndex].Tabs.Select(DataVarList[FileTabs.SelectedIndex].Tabs.Text.Length, DataVarList[FileTabs.SelectedIndex].Tabs.Text.Length);
-            }
-            CalcWordCount();
+            //if (UnRedo.CheckRedu(FileTabs.SelectedIndex))
+            //{
+            //    DataVarList[FileTabs.SelectedIndex].Tabs.Rtf = UnRedo.GetRedo(FileTabs.SelectedIndex);
+            //    DataVarList[FileTabs.SelectedIndex].Tabs.Select(DataVarList[FileTabs.SelectedIndex].Tabs.Text.Length, DataVarList[FileTabs.SelectedIndex].Tabs.Text.Length);
+            //}
+            //CalcWordCount();
+            redoToolStripMenuItem_Click(sender, e);
         }
 
         private void FontColorButton_Click(object sender, EventArgs e)
@@ -723,11 +739,14 @@ namespace Journal
             OpenImage.RestoreDirectory = true;
             if (OpenImage.ShowDialog() == DialogResult.OK)
             {
+                _image = new PictureBox();
+                Size Max = new Size(300, 300);
+                _image.MaximumSize = Max;
                 _image.Load(OpenImage.FileName);
                 Clipboard.SetImage(_image.Image);
                 DataVarList[FileTabs.SelectedIndex].Tabs.Paste();
-
             }
+            _image = null;
         }
     }
 }

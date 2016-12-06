@@ -7,29 +7,36 @@ using System.Windows.Forms;
 
 namespace Journal
 {
+    public struct UnRedo
+    {
+        public string m_var;
+        public int m_position;
+        public UnRedo(string _var, int _pos)
+        {
+            m_var = _var;
+            m_position = _pos;
+        }
+    }
     class Undo_Redo
     {
-        struct UnRedo
-        {
-            string _var;
-            int _position;
-        }
-        List<Stack<string>> Undo;
-        List<Stack<string>> Redo;
+       
+        List<Stack<UnRedo>> Undo;
+        List<Stack<UnRedo>> Redo;
         List<bool> CanUndo;
         List<bool> CanRedu;
+        UnRedo m_Buffer;
        public Undo_Redo()
         {
-            Undo = new List<Stack<string>>();
-            Redo = new List<Stack<string>>();
+            Undo = new List<Stack<UnRedo>>();
+            Redo = new List<Stack<UnRedo>>();
             CanUndo = new List<bool>();
             CanRedu = new List<bool>();
             AddPage();
         }
         public void AddPage()
         {
-            Undo.Add(new Stack<string>());
-            Redo.Add(new Stack<string>());
+            Undo.Add(new Stack<UnRedo>());
+            Redo.Add(new Stack<UnRedo>());
             CanUndo.Add(false);
             CanRedu.Add(false);
         }
@@ -40,35 +47,28 @@ namespace Journal
             CanRedu.RemoveAt(_index);
             CanUndo.RemoveAt(_index);
         }
-        public void AddToUndo(int _index, string _tabPage)
+        public void AddToUndo(int _index, string _var, int _position)
         {
-            Undo[_index].Push(_tabPage);
+            m_Buffer = new UnRedo(_var, _position);
+            Undo[_index].Push(m_Buffer);
             CanUndo[_index] = true;
         }
-        public string GetUndo(int _index)
+        public UnRedo GetUndo(int _index)
         {
-            if (Undo[_index].Count > 0)
-            {
                 if (Undo[_index].Count == 1)
                     CanUndo[_index] = false;
-                string _TP = Undo[_index].Pop();
+                UnRedo _TP = Undo[_index].Pop();
                 Redo[_index].Push(_TP);
                 CanRedu[_index] = true;
                 return _TP;
-            }
-            return "";
         }
-        public string GetRedo(int _index)
+        public UnRedo GetRedo(int _index)
         {
-            if (Redo[_index].Count > 0)
-            {
                 if (Redo[_index].Count == 1)
                     CanRedu[_index] = false;
-                string _TP = Redo[_index].Pop();
+                UnRedo _TP = Redo[_index].Pop();
                 Undo[_index].Push(_TP);
                 return _TP;
-            }
-            return "";
         }
         public void ClearRedo(int _index)
         {
