@@ -34,7 +34,7 @@ namespace Journal
         static List<DataVariable> DataVarList = new List<DataVariable>();
         Button temp = new Button();
         RichTextBox _Paste = null; // = new RichTextBox();
-       // Save_Open__File Save_Open = new Save_Open__File(DataVarList, Source);
+                                   // Save_Open__File Save_Open = new Save_Open__File(DataVarList, Source);
         ColorDialog Colordlg = new ColorDialog();
         PictureBox _image = null; //= new PictureBox();
         //List<RichTextBox> Tabs = new List<RichTextBox>();
@@ -91,6 +91,7 @@ namespace Journal
             TabPage tb = new TabPage(FileName);
             tb.BackColor = Color.White;
             RichTextBox RTB = new RichTextBox();
+            RTB.Click += JournalText_Click;
             RTB.BorderStyle = BorderStyle.None;
             string name = "New Page";
             RTB.ScrollBars = RichTextBoxScrollBars.Vertical;
@@ -119,6 +120,38 @@ namespace Journal
             Debug.WriteLine("Added new page " + FileName);
 
 
+        }
+        private void CheckButtonBackground()
+        {
+            if (DataVarList[FileTabs.SelectedIndex].Encrypted)
+            {
+                Encrpyt_Decrypt_Button.BackColor = Color.LightGray;
+                UnderlineButton.BackColor = Color.White;
+                BoldButton.BackColor = Color.White;
+                ItalicButton.BackColor = Color.White;
+                BulletPointButton.BackColor = Color.White;
+            }
+            else
+            {
+                Encrpyt_Decrypt_Button.BackColor = Color.White;
+                if (!DataVarList[FileTabs.SelectedIndex].Tabs.SelectionFont.Underline)
+                    UnderlineButton.BackColor = Color.White;
+                else
+                    UnderlineButton.BackColor = Color.LightGray;
+
+                if (!DataVarList[FileTabs.SelectedIndex].Tabs.SelectionFont.Bold)
+                    BoldButton.BackColor = Color.White;
+                else
+                    BoldButton.BackColor = Color.LightGray;
+                if (!DataVarList[FileTabs.SelectedIndex].Tabs.SelectionFont.Italic)
+                    ItalicButton.BackColor = Color.White;
+                else
+                    ItalicButton.BackColor = Color.LightGray;
+                if (DataVarList[FileTabs.SelectedIndex].Tabs.BulletIndent != 0)
+                    BulletPointButton.BackColor = Color.LightGray;
+                else
+                    BulletPointButton.BackColor = Color.White;
+            }
         }
         #endregion
         #region ToolStripButtons
@@ -166,7 +199,7 @@ namespace Journal
                 //Tabs.Remove(DataVarList[FileTabs.SelectedIndex].Tabs);
                 DataVarList.RemoveAt(FileTabs.SelectedIndex);
                 FileTabs.TabPages.Remove(FileTabs.SelectedTab);
-               // UnRedo.RemovePage(FileTabs.SelectedIndex);
+                // UnRedo.RemovePage(FileTabs.SelectedIndex);
                 //Encrypted.Remove(false);
                 if (_neweselected > 0)
                 {
@@ -290,7 +323,7 @@ namespace Journal
                     WordCountText.Text = WordCountint.ToString();
                     _Paste.Text = DataVarList[FileTabs.SelectedIndex].Tabs.SelectedText;
                     DataVarList[FileTabs.SelectedIndex].Tabs.SelectedText = "";
-                    
+
                 }
             }
         }
@@ -388,6 +421,10 @@ namespace Journal
                         Datavar.FileSources = DataVarList[FileTabs.SelectedIndex].FileSources;
                         DataVarList[FileTabs.SelectedIndex] = Datavar;
                         Encrpyt_Decrypt_Button.BackColor = Color.LightGray;
+                        UnderlineButton.BackColor = Color.White;
+                        BoldButton.BackColor = Color.White;
+                        ItalicButton.BackColor = Color.White;
+                        BulletPointButton.BackColor = Color.White;
                         FileTabs.SelectedTab.BackColor = Color.WhiteSmoke;
                         Datavar = new DataVariable();
                     }
@@ -410,6 +447,7 @@ namespace Journal
                         Datavar.FileSources = DataVarList[FileTabs.SelectedIndex].FileSources;
                         DataVarList[FileTabs.SelectedIndex] = Datavar;
                         Encrpyt_Decrypt_Button.BackColor = Color.White;
+                        CheckButtonBackground();
                         FileTabs.SelectedTab.BackColor = DataVarList[FileTabs.SelectedIndex].Tabs.BackColor;
                         Datavar = new DataVariable();
                     }
@@ -526,9 +564,10 @@ namespace Journal
         private void FileTabs_KeyDown(object sender, KeyEventArgs e)
         {
             string _tb = DataVarList[FileTabs.SelectedIndex].Tabs.Rtf;
-           // int posbuffer = DataVarList[FileTabs.SelectedIndex].Tabs.SelectionStart;
-           // UnRedo.AddToUndo(FileTabs.SelectedIndex, _tb, DataVarList[FileTabs.SelectedIndex].Tabs.SelectionStart);
+            // int posbuffer = DataVarList[FileTabs.SelectedIndex].Tabs.SelectionStart;
+            // UnRedo.AddToUndo(FileTabs.SelectedIndex, _tb, DataVarList[FileTabs.SelectedIndex].Tabs.SelectionStart);
             CalcWordCount();
+            CheckButtonBackground();
         }
         //Change word count to new tab word count
         private void FileTabs_SelectedIndexChanged(object sender, EventArgs e)
@@ -538,6 +577,7 @@ namespace Journal
             fontsize = (int)DataVarList[FileTabs.SelectedIndex].Tabs.SelectionFont.Size;
             FontText.Text = fontsize.ToString();
             CalcWordCount();
+            CheckButtonBackground();
         }
         //Change Font
         private void JournalText_Resize(object sender, EventArgs e)
@@ -625,10 +665,6 @@ namespace Journal
             if (DataVarList[FileTabs.SelectedIndex].Tabs.SelectionFont.Underline == false)
                 NFont = new Font(NFont, FontStyle.Underline | NFont.Style);
             DataVarList[FileTabs.SelectedIndex].Tabs.SelectionFont = NFont;
-
-
-
-
 
         }
         #endregion
@@ -733,20 +769,30 @@ namespace Journal
 
         private void AddPicture_Click(object sender, EventArgs e)
         {
-            OpenFileDialog OpenImage = new OpenFileDialog();
-            OpenImage.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
-            OpenImage.FilterIndex = 2;
-            OpenImage.RestoreDirectory = true;
-            if (OpenImage.ShowDialog() == DialogResult.OK)
-            {
-                _image = new PictureBox();
-                Size Max = new Size(300, 300);
-                _image.MaximumSize = Max;
-                _image.Load(OpenImage.FileName);
-                Clipboard.SetImage(_image.Image);
-                DataVarList[FileTabs.SelectedIndex].Tabs.Paste();
-            }
-            _image = null;
+            //OpenFileDialog OpenImage = new OpenFileDialog();
+            //OpenImage.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
+            //OpenImage.FilterIndex = 2;
+            //OpenImage.RestoreDirectory = true;
+            //if (OpenImage.ShowDialog() == DialogResult.OK)
+            //{
+            //    _image = new PictureBox();
+            //    Size Max = new Size(300, 300);
+            //    _image.MaximumSize = Max;
+            //    _image.Load(OpenImage.FileName);
+            //    Clipboard.SetImage(_image.Image);
+            //    DataVarList[FileTabs.SelectedIndex].Tabs.Paste();
+            //}
+            //_image = null;
+        }
+
+        private void JournalText_Click(object sender, EventArgs e)
+        {
+            CheckButtonBackground();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

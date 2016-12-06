@@ -47,8 +47,9 @@
             this.UnderlineButton = new System.Windows.Forms.ToolStripButton();
             this.ItalicButton = new System.Windows.Forms.ToolStripButton();
             this.StrikeOutButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
             this.BulletPointButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
+            this.AddPicture = new System.Windows.Forms.ToolStripButton();
             this.Encrpyt_Decrypt_Button = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.FontTextToolStrip = new System.Windows.Forms.ToolStripLabel();
@@ -105,16 +106,15 @@
             this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
             this.saveToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.FileTabs = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.JournalText = new System.Windows.Forms.RichTextBox();
-            this.AddPicture = new System.Windows.Forms.ToolStripButton();
+            this.FileTabs = new System.Windows.Forms.TabControl();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
-            this.FileTabs.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.FileTabs.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -256,17 +256,24 @@
             resources.ApplyResources(this.StrikeOutButton, "StrikeOutButton");
             this.StrikeOutButton.Name = "StrikeOutButton";
             // 
-            // toolStripSeparator14
-            // 
-            this.toolStripSeparator14.Name = "toolStripSeparator14";
-            resources.ApplyResources(this.toolStripSeparator14, "toolStripSeparator14");
-            // 
             // BulletPointButton
             // 
             this.BulletPointButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.BulletPointButton, "BulletPointButton");
             this.BulletPointButton.Name = "BulletPointButton";
             this.BulletPointButton.Click += new System.EventHandler(this.toolStripButton5_Click);
+            // 
+            // toolStripSeparator14
+            // 
+            this.toolStripSeparator14.Name = "toolStripSeparator14";
+            resources.ApplyResources(this.toolStripSeparator14, "toolStripSeparator14");
+            // 
+            // AddPicture
+            // 
+            this.AddPicture.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.AddPicture, "AddPicture");
+            this.AddPicture.Name = "AddPicture";
+            this.AddPicture.Click += new System.EventHandler(this.AddPicture_Click);
             // 
             // Encrpyt_Decrypt_Button
             // 
@@ -642,19 +649,6 @@
             this.saveAllToolStripMenuItem.Name = "saveAllToolStripMenuItem";
             this.saveAllToolStripMenuItem.Click += new System.EventHandler(this.saveAllToolStripMenuItem_Click);
             // 
-            // FileTabs
-            // 
-            this.FileTabs.Controls.Add(this.tabPage1);
-            resources.ApplyResources(this.FileTabs, "FileTabs");
-            this.FileTabs.Name = "FileTabs";
-            this.FileTabs.SelectedIndex = 0;
-            this.FileTabs.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
-            this.FileTabs.TabStop = false;
-            this.FileTabs.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.FileTabs_DrawItem);
-            this.FileTabs.SelectedIndexChanged += new System.EventHandler(this.FileTabs_SelectedIndexChanged);
-            this.FileTabs.DoubleClick += new System.EventHandler(this.FileTabs_DoubleClick);
-            this.FileTabs.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FileTabs_KeyDown);
-            // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
@@ -668,14 +662,21 @@
             this.JournalText.ContextMenuStrip = this.contextMenuStrip1;
             resources.ApplyResources(this.JournalText, "JournalText");
             this.JournalText.Name = "JournalText";
+            this.JournalText.Click += new System.EventHandler(this.JournalText_Click);
             this.JournalText.Resize += new System.EventHandler(this.JournalText_Resize);
             // 
-            // AddPicture
+            // FileTabs
             // 
-            this.AddPicture.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.AddPicture, "AddPicture");
-            this.AddPicture.Name = "AddPicture";
-            this.AddPicture.Click += new System.EventHandler(this.AddPicture_Click);
+            this.FileTabs.Controls.Add(this.tabPage1);
+            resources.ApplyResources(this.FileTabs, "FileTabs");
+            this.FileTabs.Name = "FileTabs";
+            this.FileTabs.SelectedIndex = 0;
+            this.FileTabs.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
+            this.FileTabs.TabStop = false;
+            this.FileTabs.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.FileTabs_DrawItem);
+            this.FileTabs.SelectedIndexChanged += new System.EventHandler(this.FileTabs_SelectedIndexChanged);
+            this.FileTabs.DoubleClick += new System.EventHandler(this.FileTabs_DoubleClick);
+            this.FileTabs.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FileTabs_KeyDown);
             // 
             // Form1
             // 
@@ -696,8 +697,8 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
-            this.FileTabs.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.FileTabs.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -736,7 +737,6 @@
         private System.Windows.Forms.ToolStripMenuItem signOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
-        private System.Windows.Forms.TabControl FileTabs;
         private System.Windows.Forms.ToolStripLabel FontTextToolStrip;
         private System.Windows.Forms.ToolStripTextBox FontText;
         private System.Windows.Forms.ToolStripButton SizeFrontDownButton;
@@ -780,10 +780,11 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator13;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator14;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.RichTextBox JournalText;
         private System.Windows.Forms.ToolStripButton StrikeOutButton;
         private System.Windows.Forms.ToolStripButton AddPicture;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.RichTextBox JournalText;
+        private System.Windows.Forms.TabControl FileTabs;
     }
 }
 
