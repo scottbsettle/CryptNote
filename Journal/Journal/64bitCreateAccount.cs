@@ -81,5 +81,9 @@ namespace Journal
             if(VerifyTextBox.Text.Length > 0)
             OkButton.PerformClick();
         }
+        public string GetKey()
+        {
+            return PasswordText.Text;
+        }
     }
 }

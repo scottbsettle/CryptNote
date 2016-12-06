@@ -44,3 +44,7 @@ C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Rel
 C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Release\CryptNote.application
 C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Release\CryptNote.exe
 C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Release\CryptNote.pdb
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Release\Journal.LoginDB.resources
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\bin\Release\MySql.Data.dll
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\bin\Release\MySql.Data.xml
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Release\Journal.SignUpUsername.resources
