@@ -106,6 +106,12 @@
       <DependentUpon>LoginDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Save_Open _File.cs" />
+    <Compile Include="SignUpSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpSystem.Designer.cs">
+      <DependentUpon>SignUpSystem.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignUpUsername.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SignUpSystem.resx">
+      <DependentUpon>SignUpSystem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SignUpUsername.resx">
       <DependentUpon>SignUpUsername.cs</DependentUpon>
     </EmbeddedResource>

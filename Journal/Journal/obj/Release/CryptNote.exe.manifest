@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CryptNote.exe" size="210432">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CryptNote.exe" size="230912">
       <assemblyIdentity name="CryptNote" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zQGHjqXUCDW/ufiSrPCjOIQ9K5ydKtj6Le8Q++F1194=</dsig:DigestValue>
+        <dsig:DigestValue>UwGgGe3Oqp/qn7bhwFmHt2wKFSWNLASSLzwuTDB4GcU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>vwUFk8sbLyayiHk7vYdBm1D7/rVbsqQdMuv2DMJuFPA=</dsig:DigestValue>
+        <dsig:DigestValue>A6tzLJdudvmTWTAM2uEYIl7GwZ+wWfB+NsH6i8ZPN7g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>uT+2nQFPbvyuqK+RlFfK8p5OMneJzOHE3hYpoeHh6KY=</dsig:DigestValue>
+        <dsig:DigestValue>6V+JdC8b4l9s57iWNRp66TEHQpTcVY/cZJUjUFHUF+E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -42,8 +42,6 @@ namespace Journal
             }
             if (UsernameText.Text == VerifyTextBox.Text)
             {
-                Properties.Settings.Default.Password = UsernameText.Text;
-                Properties.Settings.Default.Save();
                 Close();
             }
             else

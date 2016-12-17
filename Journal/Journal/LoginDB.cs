@@ -13,28 +13,43 @@ namespace Journal
     public partial class LoginDB : Form
     {
         private string m_Username, m_key;
-        private string ConnectDB;
+        private ConnectDB Connect = new ConnectDB();
         public LoginDB()
         {
 
             InitializeComponent();
             try
             {
-                Connect.ConnectionString = "server=localhost; userid=root; password=Mkoli123!; database=CryptNote_DB;";
+                Connect.ConnectToDB();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
 
         private void SignUpButton_Click(object sender, EventArgs e)
         {
-            SignUpUsername SignUp = new SignUpUsername();
-            _64bitCreateAccount Key = new _64bitCreateAccount(); 
+            SignUpSystem SignUp = new SignUpSystem();
             if(SignUp.ShowDialog() == DialogResult.OK)
             {
-                if(Key.ShowDialog() == DialogResult.OK)
-                {
-                    m_Username = SignUp.GetUsername();
-                    m_key = Key.GetKey();
-                }
+                string userN, pswrd;
+               userN = SignUp.GetUsername();
+               pswrd = SignUp.GetPassword();
+               
+            }
+
+        }
+
+        private void offlineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide(); 
+            if(new Login().ShowDialog() == DialogResult.OK){
+                Show();
+            }
+            else
+            {
+                Close();
             }
         }
 

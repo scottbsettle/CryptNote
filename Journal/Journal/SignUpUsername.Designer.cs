@@ -100,7 +100,6 @@
             this.VerifyTextBox.Location = new System.Drawing.Point(14, 173);
             this.VerifyTextBox.MaxLength = 64;
             this.VerifyTextBox.Name = "VerifyTextBox";
-            this.VerifyTextBox.PasswordChar = '*';
             this.VerifyTextBox.Size = new System.Drawing.Size(243, 20);
             this.VerifyTextBox.TabIndex = 47;
             // 
@@ -119,7 +118,6 @@
             this.UsernameText.Location = new System.Drawing.Point(14, 128);
             this.UsernameText.MaxLength = 64;
             this.UsernameText.Name = "UsernameText";
-            this.UsernameText.PasswordChar = '*';
             this.UsernameText.Size = new System.Drawing.Size(243, 20);
             this.UsernameText.TabIndex = 45;
             // 
