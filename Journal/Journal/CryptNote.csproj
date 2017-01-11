@@ -32,6 +32,8 @@
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -75,9 +77,30 @@
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.104.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.104.0\lib\net451\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.104.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.104.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.104.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.104.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -90,101 +113,92 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="32bitEncryption.cs" />
-    <Compile Include="64bitCreateAccount.cs">
+    <Compile Include="Custome Classes\32bitEncryption.cs" />
+    <Compile Include="Forms\64bitCreateAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="64bitCreateAccount.Designer.cs">
+    <Compile Include="Forms\64bitCreateAccount.Designer.cs">
       <DependentUpon>64bitCreateAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="BinaryRW.cs" />
-    <Compile Include="ConnectDB.cs" />
-    <Compile Include="LoginDB.cs">
+    <Compile Include="Custome Classes\BinaryRW.cs" />
+    <Compile Include="Custome Classes\DataBase\LocalDB.cs" />
+    <Compile Include="Custome Classes\DataBase\DBCommands.cs" />
+    <Compile Include="Custome Classes\DataBase\DBFunctions.cs" />
+    <Compile Include="Forms\LoginDB.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginDB.Designer.cs">
+    <Compile Include="Forms\LoginDB.Designer.cs">
       <DependentUpon>LoginDB.cs</DependentUpon>
     </Compile>
-    <Compile Include="Save_Open _File.cs" />
-    <Compile Include="SignUpSystem.cs">
+    <Compile Include="Custome Classes\Save_Open _File.cs" />
+    <Compile Include="Forms\SignUpSystem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SignUpSystem.Designer.cs">
+    <Compile Include="Forms\SignUpSystem.Designer.cs">
       <DependentUpon>SignUpSystem.cs</DependentUpon>
     </Compile>
-    <Compile Include="SignUpUsername.cs">
+    <Compile Include="Forms\SignUpUsername.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SignUpUsername.Designer.cs">
+    <Compile Include="Forms\SignUpUsername.Designer.cs">
       <DependentUpon>SignUpUsername.cs</DependentUpon>
     </Compile>
-    <Compile Include="Undo_Redo.cs" />
-    <Compile Include="DialogWindows.cs">
+    <Compile Include="Custome Classes\Undo_Redo.cs" />
+    <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DialogWindows.Designer.cs">
-      <DependentUpon>DialogWindows.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="Forms\Info.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Info.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Info.Designer.cs">
+    <Compile Include="Forms\Info.Designer.cs">
       <DependentUpon>Info.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="OpenSource.cs">
+    <Compile Include="Forms\OpenSource.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OpenSource.Designer.cs">
+    <Compile Include="Forms\OpenSource.Designer.cs">
       <DependentUpon>OpenSource.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="64bitCreateAccount.resx">
+    <Compile Include="Custome Classes\UserInfo.cs" />
+    <Compile Include="Forms\TestDBFunctions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TestDBFunctions.Designer.cs">
+      <DependentUpon>TestDBFunctions.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\64bitCreateAccount.resx">
       <DependentUpon>64bitCreateAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DialogWindows.resx">
-      <DependentUpon>DialogWindows.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.aa.resx">
+    <EmbeddedResource Include="Forms\Form1.aa.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.af.resx">
+    <EmbeddedResource Include="Forms\Form1.af.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Info.resx">
+    <EmbeddedResource Include="Forms\Info.resx">
       <DependentUpon>Info.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginDB.resx">
+    <EmbeddedResource Include="Forms\LoginDB.resx">
       <DependentUpon>LoginDB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OpenSource.resx">
+    <EmbeddedResource Include="Forms\OpenSource.resx">
       <DependentUpon>OpenSource.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -197,13 +211,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SignUpSystem.resx">
+    <EmbeddedResource Include="Forms\SignUpSystem.resx">
       <DependentUpon>SignUpSystem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignUpUsername.resx">
+    <EmbeddedResource Include="Forms\SignUpUsername.resx">
       <DependentUpon>SignUpUsername.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TestDBFunctions.resx">
+      <DependentUpon>TestDBFunctions.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="CryptNote_1_TemporaryKey.pfx" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -239,6 +257,13 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.104.0\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.104.0\build\net451\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.104.0\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.104.0\build\net451\System.Data.SQLite.Core.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
