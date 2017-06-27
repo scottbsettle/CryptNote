@@ -1,0 +1,58 @@
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\bin\Release\Journal.exe.config
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\bin\Release\Journal.exe
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\bin\Release\Journal.pdb
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\bin\Release\aa\Journal.resources.dll
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\bin\Release\af\Journal.resources.dll
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Release\Journal._64bitCreateAccount.resources
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Release\Journal.DialogWindow.resources
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Release\Journal.Form1.resources
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Release\Journal.UsernamePassword.resources
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Release\Journal.Info.resources
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Release\Journal.Login.resources
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Release\Journal.OpenSource.resources
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Release\Journal.Properties.Resources.resources
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Release\Journal.Form1.aa.resources
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Release\Journal.Form1.af.resources
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Release\CryptNote.csproj.GenerateResource.Cache
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Release\aa\Journal.resources.dll
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Release\af\Journal.resources.dll
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Release\Journal.exe
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Release\Journal.pdb
+C:\Users\God\Documents\Visual Studio 2015\Projects\0_01\Journal\Journal\obj\Release\CryptNote.csprojResolveAssemblyReference.cache
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Release\CryptNote.csprojResolveAssemblyReference.cache
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Release\Journal._64bitCreateAccount.resources
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Release\Journal.Form1.resources
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Release\Journal.Info.resources
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Release\Journal.Login.resources
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Release\Journal.OpenSource.resources
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Release\Journal.Properties.Resources.resources
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Release\Journal.Form1.aa.resources
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Release\Journal.Form1.af.resources
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Release\CryptNote.csproj.GenerateResource.Cache
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\bin\Release\CryptNote.exe.config
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\bin\Release\CryptNote.exe.manifest
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\bin\Release\CryptNote.application
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\bin\Release\CryptNote.exe
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\bin\Release\CryptNote.pdb
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\bin\Release\aa\CryptNote.resources.dll
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\bin\Release\af\CryptNote.resources.dll
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Release\aa\CryptNote.resources.dll
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Release\af\CryptNote.resources.dll
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Release\CryptNote.exe.manifest
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Release\CryptNote.application
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Release\CryptNote.exe
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Release\CryptNote.pdb
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Release\Journal.LoginDB.resources
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\bin\Release\MySql.Data.dll
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\bin\Release\MySql.Data.xml
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Release\Journal.SignUpUsername.resources
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Release\Journal.SignUpSystem.resources
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\bin\Release\EntityFramework.dll
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\bin\Release\System.Data.SQLite.dll
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\bin\Release\System.Data.SQLite.EF6.dll
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\bin\Release\System.Data.SQLite.Linq.dll
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\bin\Release\EntityFramework.xml
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\bin\Release\System.Data.SQLite.xml
+C:\Users\TomAlex\Documents\Tom Alex\School\Projects\0_01\Journal\Journal\obj\Release\Journal.TestDBFunctions.resources
